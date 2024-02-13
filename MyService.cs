@@ -2,18 +2,28 @@
 
 namespace MauiAppInsights
 {
-    public class MyService
+    public class MyService : IMyService
     {
-        private readonly ILogger<MyService> logger;
+        private readonly ILogger<MyService> _logger;
 
         public MyService(ILogger<MyService> logger)
         {
-            this.logger = logger;
+            this._logger = logger;
         }
 
         public void MyAction(string parameter)
         {
-            logger.LogInformation("My action executed with parameter: {Parameter}", parameter);
+            _logger.LogInformation("My action executed with parameter: {Parameter}", parameter);
+
+            try
+            {
+                // Do something
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Something went wrong");
+            }
+
         }
 
     }

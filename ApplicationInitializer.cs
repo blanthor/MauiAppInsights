@@ -1,13 +1,10 @@
 ﻿using Microsoft.ApplicationInsights.Channel;
 using Microsoft.ApplicationInsights.Extensibility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MauiAppInsights
 {
+    // This class is used to initialize the Application Insights Telemetry Client
+    // with the session information, including device information and the application version
     public class ApplicationInitializer : ITelemetryInitializer
     {
         public string SessionId { get; } = Guid.NewGuid().ToString();
