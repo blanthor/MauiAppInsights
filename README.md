@@ -3,6 +3,7 @@ MauiAppInsights is a .NET MAUI App, written in .NET 8 taking the standard templa
 
 ## References
 https://vladislavantonyuk.github.io/articles/Adding-Application-Insights-to-.NET-MAUI-Application/
+https://learn.microsoft.com/en-us/azure/azure-monitor/app/worker-service 
 
 ## Mobile App (MauiAppInsights)
 This is based on the Visual Studio .NET MAUI modified to us the MVVM pattern.
