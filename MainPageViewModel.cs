@@ -12,7 +12,8 @@ namespace MauiAppInsights
         {
             _myService = myService;
             _logger = logger;
-            //_counterText = "Click me";
+
+            _counterText = "Click me!";
         }
 
         [ObservableProperty]
@@ -27,7 +28,9 @@ namespace MauiAppInsights
         [RelayCommand]
         public void CounterClicked()
         {
-            _counterText = $"Clicked {++_count} times";
+            // ObservableObject is weird. It doesn't update the UI if you just change the value
+            // of the underlying field. CounterText is a generated property, so it will update the UI.
+            CounterText = $"Clicked {++_count} times";
             _myService.MyAction(_counterText);
             _logger.LogInformation(_counterText);
         }

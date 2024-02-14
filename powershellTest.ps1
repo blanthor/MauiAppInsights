@@ -1,5 +1,5 @@
 # Info: Provide either the connection string or ikey for your Application Insights resource
-$ConnectionString = "InstrumentationKey=78256835-5652-4d21-a15e-e898cdf30a82;IngestionEndpoint=https://southcentralus-3.in.applicationinsights.azure.com/;LiveEndpoint=https://southcentralus.livediagnostics.monitor.azure.com/"
+$ConnectionString = "your connnection string here"
 $InstrumentationKey = ""
 function ParseConnectionString {
 param ([string]$ConnectionString)
