@@ -11,8 +11,9 @@ This is based on the Visual Studio .NET MAUI modified to us the MVVM pattern.
 # Getting Started
 ## Mobile App
  - How to contribute to the App
-    - Cloning the repository using git clone "https://AzMobileDevOps@dev.azure.com/AzMobileDevOps/ProcessTransformation/_git/AppInsightsPoC"
-    - Create a new branch. Branch name should be the card number for which you are amending the code changes with prefix as [U/T/B], U refers to User story, T refers to Task, B refers to Bug. For example: If you are working on User story 163 then branch name should be U0163-[XYZ Details]
+    - Cloning the repository using git clone ... :wq
+
+    - Create a new branch. Branch name should be the card number for which you are amending the code changes with prefix as [U/T/B], U refers to User story, T refers to Task, B refers to Bug. For example: If you are working on User story 163 then branch name should be U0163-[XYZ Details]1
  - Software dependencies
     - Visual Studio 2022
     - Android SDK
@@ -31,11 +32,12 @@ This is based on the Visual Studio .NET MAUI modified to us the MVVM pattern.
     ```
 ## How to Test
 ### Mobile App
+ - Connection string should be added to the BuildApplicationInsights method in MauiProgram.cs
  - Run the app in an emulator.
  - click on the button on the MainPage, which will trigger the RelayCommand in the MainPageViewModel.
 ### Azure
  - Navigate to the Azure Portal
- - Select the Application Insights instance 
+ 
  - Select **Transaction search**
  - Click on the **See all data in the last 24 hours** button. After a delay all of the events logged in the mobile app will appear in the list.
     
@@ -47,7 +49,3 @@ This is based on the Visual Studio .NET MAUI modified to us the MVVM pattern.
         - Target Android Framework  as Android 13.0 (API Level 33)
         - Minimum Target Android Framework as Android 11.0 (API Level 30)
  
-# How to Contribute
-1. Get Azure repo access by dropping mail to vinay.karnakanti@techwave.net, Subject : AIT MSS Site Survey mobile code repository access.
-1. Raise PR. Once code is reviewed and PR is approved, complete the PR.
-1. Delete the work branch and mark respective work item as completed.
